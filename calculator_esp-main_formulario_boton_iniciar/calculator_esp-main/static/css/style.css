@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    background-color: #fff;
+    color: #272727;
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-image: url("../img/back.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #CCE59D;
+    padding: 25vh 30px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.header__text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: fit-content;
+    text-align: right;
+}
+
+main {
+    padding: 0 30px 100px;
+}
+
+.main__title {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.list__item a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: inherit;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 24px;
+    border: 1px solid #EB8028;
+    transition: 0.2s;
+}
+.item__img {
+    object-fit: contain;
+    width: 150px;
+}
+
+.list__item a:hover {
+    box-shadow: 1px 1px 4px 4px #0EB07C;
+}
+
+.main__rez {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.rez__img {
+    object-fit: contain;
+    width: 300px;
+}
+
+.main__title--margin {
+    margin-bottom: 50px;
+}
+
+.main__link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px 0;
+    width: 300px;
+    border-radius: 20px;
+    background-color: #0EB07C;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+
+.user input {
+    padding: 10px;
+    border: 1px solid #EB8028;
+    background: inherit;
+    border-radius: 5px;
+    font: inherit;
+    width: 100%;
+    color: #EB8028;
+}
+
+.user input:focus,
+.user input:active {
+    border: 1px solid #EB8028;
+    outline: none;
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.user-info {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+label {
+    display:inline-block ;
+    margin-bottom: 10px;
+}
+
+.address-date {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.delivery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    width: 10%;
+    padding: 10px;
+    min-width: 300px;
+    cursor: pointer;
+    align-self: center;
+    border: none;
+    border-radius: 10px;
+    background: #0EB07C;
+    font: inherit;
+    color: #fff;
+}
+
+/* Resultados enviados desde el formulario */
+.form-result {
+    width: min(700px, 90%);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 30px;
+    border: 1px solid #EB8028;
+    border-radius: 24px;
+    background-color: #fff;
+    overflow-wrap: anywhere;
+}
+
+.form-result p {
+    line-height: 1.5;
+}
+
+.form-result strong {
+    color: #0A8D65;
+}
+
+@media (max-width: 700px) {
+    .header {
+        padding: 12vh 20px;
+        background-size: cover;
+        margin-bottom: 35px;
+    }
+
+    .header__text {
+        max-width: 100%;
+    }
+
+    main {
+        padding: 0 20px 60px;
+    }
+
+    .rez__img {
+        max-width: 100%;
+    }
+
+    .form-result {
+        padding: 22px;
+    }
+}
+
+
+/* Boton para iniciar el formulario desde los resultados de eficiencia */
+.form-start-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: min(320px, 90%);
+    min-width: 0;
+    min-height: 54px;
+    padding: 15px 24px;
+    margin-top: 12px;
+    border: 2px solid #0EB07C;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #0EB07C, #079568);
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 5px 0 #087b59;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.form-start-button:hover {
+    background: linear-gradient(135deg, #12c58c, #0A8D65);
+    box-shadow: 0 7px 12px rgba(14, 176, 124, 0.28);
+    transform: translateY(-2px);
+}
+
+.form-start-button:active {
+    box-shadow: 0 2px 0 #087b59;
+    transform: translateY(3px);
+}
+
+.form-start-button:focus-visible {
+    outline: 3px solid #EB8028;
+    outline-offset: 4px;
+}
